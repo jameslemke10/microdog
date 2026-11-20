@@ -85,6 +85,7 @@ flowchart LR
 | Servo layout | 11× STS3215: rear 4 (hip yaw, leg pitch, 2 wheels), front 3 (leg pitch, 2 wheels), neck and head 4 (neck pitch, head pitch, head yaw, jaw). See [servo_map.md](servo_map.md). | ✅ Decided |
 | Overall size | Microduck-like, and as small as fits every BOM component. The body block-out sets the real number. | ✅ Decided (approach) |
 | CAD tool | Code-generated, to keep it reviewable in diffs. Recommendation: **build123d**, which has built-in joints that map to URDF/MJCF. CadQuery is the alternative. | ⏳ Needs approval |
+| 3D review | Live [OCP CAD Viewer](https://github.com/bernhard-42/vscode-ocp-cad-viewer) in a browser: orbit, zoom, pan, section clipping, measuring, and a parts tree to hide or show components. Every gate review happens in it. | ✅ Decided |
 | Insert sizes and hole specs | Set by a test coupon on the P1S in PETG | ⏳ Coupon print |
 | Fit tolerances | Servo pocket and peg clearance, from the same coupon | ⏳ Coupon print |
 | Payload | Heaviest attachment it must lift or push | ⏳ TBD |

@@ -11,3 +11,5 @@ secrets.*
 
 # work in progress; graduates to cad/ or software/ when finished
 internal/
+# local editor / agent settings
+.claude/
