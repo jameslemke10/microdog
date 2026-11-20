@@ -84,7 +84,7 @@ flowchart LR
 | Fasteners | **Heat-set inserts** (brass, M2 and M3) for printed-to-printed joints and anything taken apart more than once. Servos keep their own self-tapping screws. | ✅ Decided |
 | Servo layout | 11× STS3215: rear 4 (hip yaw, leg pitch, 2 wheels), front 3 (leg pitch, 2 wheels), neck and head 4 (neck pitch, head pitch, head yaw, jaw). See [servo_map.md](servo_map.md). | ✅ Decided |
 | Overall size | Microduck-like, and as small as fits every BOM component. The body block-out sets the real number. | ✅ Decided (approach) |
-| CAD tool | Code-generated, to keep it reviewable in diffs. Recommendation: **build123d**, which has built-in joints that map to URDF/MJCF. CadQuery is the alternative. | ⏳ Needs approval |
+| CAD tool | **build123d** (Python). Imports vendor STEP files, gives exact collision checks on the OpenCASCADE kernel, has built-in joints for the URDF/MJCF export, and keeps every change reviewable as text. | ✅ Decided |
 | 3D review | Live [OCP CAD Viewer](https://github.com/bernhard-42/vscode-ocp-cad-viewer) in a browser: orbit, zoom, pan, section clipping, measuring, and a parts tree to hide or show components. Every gate review happens in it. | ✅ Decided |
 | Insert sizes and hole specs | Set by a test coupon on the P1S in PETG | ⏳ Coupon print |
 | Fit tolerances | Servo pocket and peg clearance, from the same coupon | ⏳ Coupon print |
@@ -121,4 +121,5 @@ Every approved decision goes here, newest at the bottom, with what was learned.
 | 2026-11-20 | Step 0 | P1S, PETG, heat-set inserts | Heat and sun resistance; durable threads for repeated assembly |
 | 2026-11-20 | Step 0 | Servo layout: rear 4 / front 3 / neck + head 4 | Forklift-style rear steering; height from the leg pitch joints |
 | 2026-11-20 | Step 0 | Pi 5 goes in the head | The camera ribbon is the most fragile, hardest cable to route; sturdier cables go through the neck instead |
+| 2026-11-20 | Step 0 | build123d for CAD, OCP CAD Viewer for reviews | Exact geometry for fit and collision checks, joints for sim export, diff-friendly; the viewer allows live rotate, zoom, pan and section views |
 | 2026-11-20 | Step 0 | CAD must produce real-component fit checks, a generated assembly guide with collision checks, and a sim model | Prove the build works before printing; train policies on the same geometry |
