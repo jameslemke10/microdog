@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+# local recordings and logs
+runs/
+*.log
+# local secrets (Wi-Fi, API keys)
+secrets.*
+!secrets.*.example
+
+# work in progress; graduates to cad/ or software/ when finished
+internal/
