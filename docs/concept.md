@@ -48,7 +48,7 @@ These positions are a starting intent. Each one gets confirmed or changed in its
 | URT-2 servo adapter | Body, above the battery |
 | IMU #1 | Body |
 | IMU #2 | Head |
-| Raspberry Pi 5 | Head |
+| Raspberry Pi 5 | **Head (decided).** Keeps the fragile camera ribbon short. |
 | Camera + ribbon cable | Head, with the ribbon running along the head |
 
 ## What it should feel like to build
@@ -62,4 +62,4 @@ These positions are a starting intent. Each one gets confirmed or changed in its
 
 - How much can it carry? This sets servo torque, peg strength and wheel grip.
 - How does an attachment stay on, and how does the robot let go of it?
-- Should the Pi ride in the head (short camera cable) or the body (lighter head, less wiring through the neck)? See [open-questions.md](open-questions.md).
+- With the Pi in the head, what runs through the neck and how does it flex? See [open-questions.md](open-questions.md).

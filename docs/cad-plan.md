@@ -89,7 +89,7 @@ flowchart LR
 | Fit tolerances | Servo pocket and peg clearance, from the same coupon | ⏳ Coupon print |
 | Payload | Heaviest attachment it must lift or push | ⏳ TBD |
 | Wheels | Diameter, tyre (printed TPU or bought), direct on the servo horn | ⏳ Decided in part 2 |
-| Pi location | Head (as sketched) or body | ⏳ Decided in part 1 or 5 |
+| Pi location | **Head.** The camera ribbon is the most fragile and hardest cable to route, so it stays short. Power, USB to the URT-2, the servo chain and the body IMU's I2C run through the neck instead. | ✅ Decided |
 
 ### Component library to collect
 
@@ -100,10 +100,11 @@ Each needs a 3D model plus a measured mass. Vendor files go in `cad/vendor/` wit
 | Feetech STS3215 | Vendor STEP | TBD |
 | Raspberry Pi 5 + Active Cooler | Raspberry Pi STEP | TBD |
 | Camera Module 3 Wide | Raspberry Pi STEP | TBD |
-| URT-2 adapter | Model from calipers | TBD |
+| URT-2 adapter (CH343, USB-C, dual TTL + RS485) | Model from calipers | TBD |
 | Pololu D24V50F5 | Pololu drawing | TBD |
-| NP-F970 battery + plate | Model from calipers | TBD |
-| BNO086 breakout (×2?) | SparkFun files | TBD |
+| NP-F970 battery | Model from calipers | TBD |
+| NP-F battery plate | Model from calipers. Listing: ~100 × 90 × 15 mm, 4 corner holes on a 75 mm VESA square. | ~49 g (listing) |
+| IMU ×2 (body, head) | Depends on the model of the two IMUs on hand | TBD |
 | VL53L7CX breakout | Once chosen | TBD |
 | INMP441, MAX98357A, speaker | Model from calipers | TBD |
 | Rocker switch, fuse holder, WAGO 221 | Vendor or calipers | TBD |
@@ -118,4 +119,5 @@ Every approved decision goes here, newest at the bottom, with what was learned.
 | 2026-11-20 | Plan | Body first, then rear, front, neck, head; four gates per part | Approving one part at a time catches mistakes early |
 | 2026-11-20 | Step 0 | P1S, PETG, heat-set inserts | Heat and sun resistance; durable threads for repeated assembly |
 | 2026-11-20 | Step 0 | Servo layout: rear 4 / front 3 / neck + head 4 | Forklift-style rear steering; height from the leg pitch joints |
+| 2026-11-20 | Step 0 | Pi 5 goes in the head | The camera ribbon is the most fragile, hardest cable to route; sturdier cables go through the neck instead |
 | 2026-11-20 | Step 0 | CAD must produce real-component fit checks, a generated assembly guide with collision checks, and a sim model | Prove the build works before printing; train policies on the same geometry |
