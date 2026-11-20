@@ -94,15 +94,16 @@ flowchart LR
 
 ### Component library to collect
 
-Each needs a 3D model plus a measured mass. Vendor files go in `cad/vendor/` with their source and license noted. Any that can't be redistributed get a download script instead.
+Each needs a 3D model plus a measured mass. Vendor files are fetched by a script from their official sources rather than committed (the Pi 5 STEP alone is 77 MB), with source and license noted.
 
 | Component | Model source | Mass |
 |---|---|---|
-| Feetech STS3215 | Vendor STEP | TBD |
-| Raspberry Pi 5 + Active Cooler | Raspberry Pi STEP | TBD |
-| Camera Module 3 Wide | Raspberry Pi STEP | TBD |
+| Feetech STS3215 | ✅ Vendor STEP (45.4 × 24.8 mm body). Spot-check with calipers. | TBD |
+| Raspberry Pi 5 | ✅ Official STEP from Raspberry Pi Ltd (MIT) | TBD |
+| Active Cooler | ✅ Envelope from the official drawing (63.5 × 42.5 × 13.7 mm). Position on the Pi still to be measured. | TBD |
+| Camera Module 3 Wide | ✅ Modelled from the official drawing (no STEP published) | TBD |
 | URT-2 adapter (CH343, USB-C, dual TTL + RS485) | Model from calipers | TBD |
-| Pololu D24V50F5 | Pololu drawing | TBD |
+| Pololu D24V50F5 | ✅ Official Pololu STEP | TBD |
 | NP-F970 battery | Model from calipers | TBD |
 | NP-F battery plate | Model from calipers. Listing: ~100 × 90 × 15 mm, 4 corner holes on a 75 mm VESA square. | ~49 g (listing) |
 | IMU ×2 (body, head) | Depends on the model of the two IMUs on hand | TBD |
