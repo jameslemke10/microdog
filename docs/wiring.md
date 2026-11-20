@@ -42,7 +42,8 @@ flowchart LR
 
 | Device | Address | Power | Notes |
 |---|---|---|---|
-| SparkFun BNO086 (Qwiic) | **0x4B** (not 0x4A like the Adafruit BNO085) | 3.3 V | Mount flat near the body centre. Qwiic-to-female jumpers mean no soldering. |
+| SparkFun BNO086 (Qwiic), body | **0x4B** (not 0x4A like the Adafruit BNO085) | 3.3 V | Mount flat near the body centre. Qwiic-to-female jumpers mean no soldering. |
+| SparkFun BNO086, head (if added) | 0x4A via its address jumper | 3.3 V | See [open-questions.md](open-questions.md) |
 | VL53L7CX ToF | TBD (the VL53L5CX was 0x29) | **3.3 V**, so the I2C lines stay at 3.3 V | An 8×8 close-range "whisker" sensor, reliable to ~1 m. Exact breakout board TBD. |
 
 Enable I2C at 400 kHz in `/boot/firmware/config.txt`:

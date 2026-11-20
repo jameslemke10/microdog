@@ -22,5 +22,7 @@ Audio,MAX98357A I2S amplifier,1,"Speaker driver, powered from the 5 V regulator"
 Audio,4 ohm 3 W speaker,1,Voice,https://www.amazon.com/dp/B0BTP67F81,9.59,4-pack,yes,Cut off the JST plug; screw the wires into the amp.
 Audio,INMP441 I2S microphone,2,Stereo ears,https://www.amazon.com/dp/B0F944JC5N,7.16,3-pack,yes,Needs header pins soldered.
 Misc,"Dupont jumper wires (M-F, M-M, F-F)",1,GPIO hookups,https://www.amazon.com/dp/B01EV70C78,5.93,120-pc kit,yes,Skip if you have some.
-Misc,"PLA/PETG filament, M2/M3 screws",,Printed parts and fasteners,,,,yes,Quantities TBD once the body CAD exists.
+Misc,PETG filament,,All printed parts (chosen for heat and sun resistance),,,,yes,Amount TBD from the CAD slicer estimates.
+Misc,"Brass heat-set inserts, M2 and M3",,Threads for printed-to-printed joints,,,,yes,Sizes and count come from the CAD and the Step 0 test coupon.
+Misc,M2 / M3 socket-head screws,,Fasteners,,,,yes,Lengths and counts come from the CAD.
 Optional,Raspberry Pi AI HAT+ (Hailo),1,30+ fps on-robot vision,,,,optional,About $70-110. Only if CPU YOLO is too slow.

@@ -14,7 +14,7 @@ The full list with links is in [`bom.csv`](bom.csv) (it opens as a table on GitH
 | Misc | $5.93 | Jumper wires |
 | **Total** | **$652.60** | |
 
-**Not yet in the total:** ToF sensor (~$20), NP-F battery plate (~$15), 15 A fuse, filament and screws, and a USB-C PD charger (36 W+) if you don't have one. The optional Hailo AI HAT+ is about $70–110.
+**Not yet in the total:** ToF sensor (~$20), NP-F battery plate (~$15), 15 A fuse, PETG filament, heat-set inserts and screws, and a USB-C PD charger (36 W+) if you don't have one. The optional Hailo AI HAT+ is about $70–110.
 
 ### Column guide
 

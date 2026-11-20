@@ -4,30 +4,30 @@ All 11 actuators are **Feetech STS3215 7.4 V (C001, 1:345 gearing)** serial bus 
 
 ## Joints
 
-The sketch splits them 4 / 3 / 4. Each row gets filled in when the [CAD plan](cad-plan.md) step for that part is approved.
+IDs follow the group: rear 10s, front 20s, neck and head 30s. That way an ID tells you roughly where the servo is. Sign conventions and limits get filled in at bring-up.
 
-| Group | Joint | ID | Mode | Notes |
-|---|---|---|---|---|
-| Lower body | TBD | TBD | | |
-| Lower body | TBD | TBD | | |
-| Lower body | TBD | TBD | | |
-| Lower body | TBD | TBD | | |
-| Upper body | Body height | TBD | position | |
-| Upper body | Neck pitch | TBD | position | |
-| Upper body | TBD | TBD | | |
-| Head | TBD | TBD | | |
-| Head | TBD | TBD | | |
-| Head | TBD | TBD | | |
-| Head | TBD | TBD | | |
+| ID | Group | Joint | Mode | Positive direction | Limits |
+|---|---|---|---|---|---|
+| 11 | Rear | Rear hip (yaw, steering) | position | TBD | TBD |
+| 12 | Rear | Rear leg (pitch) | position | TBD | TBD |
+| 13 | Rear | Rear-left wheel | wheel | TBD | continuous |
+| 14 | Rear | Rear-right wheel | wheel | TBD | continuous |
+| 21 | Front | Front leg (pitch) | position | TBD | TBD |
+| 22 | Front | Front-left wheel | wheel | TBD | continuous |
+| 23 | Front | Front-right wheel | wheel | TBD | continuous |
+| 31 | Neck | Neck (pitch) | position | TBD | TBD |
+| 32 | Head | Head pitch | position | TBD | TBD |
+| 33 | Head | Head yaw | position | TBD | TBD |
+| 34 | Head | Jaw | position | TBD | TBD |
 
-**ID convention (proposed):** number by group, so IDs read like a map: lower body 10–19, upper body 20–29, head 30–39.
+The IDs are a proposal; confirm them before programming any servo. Your existing servos still carry IDs from an earlier project, so re-ID them to this table.
 
-## Setting up a new servo
+## Setting up a servo
 
 1. Plug in **one** servo alone. New servos all answer as ID 1, so two at once collide.
 2. Give it its ID from the table.
 3. Raise its over-voltage limit to 9.0 V (see below).
-4. Mark the servo body with its ID.
+4. Label the servo body with its ID.
 
 Tooling for these steps lands in `software/` once it's been tested on the new build.
 
