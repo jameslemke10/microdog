@@ -24,6 +24,7 @@ Audio,4 ohm 3 W speaker,1,Voice,https://www.amazon.com/dp/B0BTP67F81,9.59,4-pack
 Audio,INMP441 I2S microphone,2,Stereo ears,https://www.amazon.com/dp/B0F944JC5N,7.16,3-pack,yes,Needs header pins soldered.
 Misc,"Dupont jumper wires (M-F, M-M, F-F)",1,GPIO hookups,https://www.amazon.com/dp/B01EV70C78,5.93,120-pc kit,yes,Skip if you have some.
 Misc,PETG filament,,All printed parts (chosen for heat and sun resistance),,,,yes,Amount TBD from the CAD slicer estimates.
-Misc,"Brass heat-set inserts, M2 and M3",,Threads for printed-to-printed joints,,,,yes,Sizes and count come from the CAD and the Step 0 test coupon.
-Misc,M2 / M3 socket-head screws,,Fasteners,,,,yes,Lengths and counts come from the CAD.
+Misc,"CNC Kitchen heat-set inserts, M3 standard (M3 x 5.7), 100 pcs",,Threads for printed-to-printed joints,https://3djake.com/cnc-kitchen/threaded-inserts-m3-standard,,100 pcs,yes,"Hole 4.0 mm (maker spec), depth >= 6.5 mm. Count TBD from the CAD; final hole size from the Step 0 coupon."
+Misc,"CNC Kitchen heat-set inserts, M2.5 standard (M2.5 x 4.0), 100 pcs",,"Raspberry Pi 5 mounting (its holes are 2.7 mm, for M2.5 screws)",https://www.3djake.com/cnc-kitchen/threaded-inserts-m25-standard,11.37,100 pcs,yes,"Hole 4.0 mm (maker spec), depth >= 5 mm."
+Misc,M2.5 / M3 socket-head screws,,Fasteners,,,,yes,Lengths and counts come from the CAD.
 Optional,Raspberry Pi AI HAT+ (Hailo),1,30+ fps on-robot vision,,,,optional,About $70-110. Only if CPU YOLO is too slow.

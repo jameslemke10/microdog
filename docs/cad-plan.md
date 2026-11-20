@@ -81,7 +81,7 @@ flowchart LR
 |---|---|---|
 | Printer | Bambu Lab P1S. Build volume 256 × 256 × 256 mm sets the largest single part. | ✅ Decided |
 | Material | **PETG**. It handles sun and heat better than PLA and is tougher for pegs and mounts. | ✅ Decided |
-| Fasteners | **Heat-set inserts** (brass, M2 and M3) for printed-to-printed joints and anything taken apart more than once. Servos keep their own self-tapping screws. | ✅ Decided |
+| Fasteners | **Heat-set inserts**: CNC Kitchen M3 × 5.7 (4.0 mm hole) for structure, M2.5 × 4.0 for the Pi 5, for printed-to-printed joints and anything taken apart more than once. Servos keep their own self-tapping screws. | ✅ Decided |
 | Servo layout | 11× STS3215: rear 4 (hip yaw, leg pitch, 2 wheels), front 3 (leg pitch, 2 wheels), neck and head 4 (neck pitch, head pitch, head yaw, jaw). See [servo_map.md](servo_map.md). | ✅ Decided |
 | Overall size | Microduck-like, and as small as fits every BOM component. The body block-out sets the real number. | ✅ Decided (approach) |
 | CAD tool | **build123d** (Python). Imports vendor STEP files, gives exact collision checks on the OpenCASCADE kernel, has built-in joints for the URDF/MJCF export, and keeps every change reviewable as text. | ✅ Decided |
