@@ -134,4 +134,4 @@ Every approved decision goes here, newest at the bottom, with what was learned.
 | 2026-11-23 | Step 0 | Round 1 of measurements (tape) folded in. NP-F970 stands 74.6 mm off its plate. Proposed IMUs: BNO08X body, MPU-6050 head. | A tape is good for envelopes; slots cover hole positions until calipers |
 | 2026-11-23 | Step 0 | Main on/off is an XT30 plug, not a rocker switch | The KCD1 on hand is marked 6(3)A; an XT30 is rated ~15 A, is already on hand, and isolates both poles |
 | 2026-11-23 | Step 0 | No separate fuse for now; the body keeps room for an optional 10 A inline fuse | The SmallRig pack's own ~11 A protection covers shorts and overloads |
-| 2026-11-23 | Step 0 | NP-F plate: battery slides along the plate's 100 mm axis, in from the open short end; ridge ~59 mm wide | Corrected from the first model, which had it rotated 90° |
+| 2026-11-23 | Step 0 | NP-F plate: the battery drops straight onto the plate and slides ~10 mm along its 100 mm axis into two latches; ridge ~59 mm wide. The body leaves 10 mm of slide room and a clear lift straight up. | Corrected from the first model, which had it rotated 90° |
