@@ -24,6 +24,8 @@ Audio,4 ohm 3 W speaker,1,Voice,https://www.amazon.com/dp/B0BTP67F81,9.59,4-pack
 Audio,INMP441 I2S microphone,2,Stereo ears,https://www.amazon.com/dp/B0F944JC5N,7.16,3-pack,yes,Needs header pins soldered.
 Misc,"Dupont jumper wires (M-F, M-M, F-F)",1,GPIO hookups,https://www.amazon.com/dp/B01EV70C78,5.93,120-pc kit,yes,Skip if you have some.
 Misc,PETG filament,,All printed parts (chosen for heat and sun resistance),,,,yes,Amount TBD from the CAD slicer estimates.
-Misc,"Ktehloy heat-set inserts, M3 x 4 x 5 mm, 120 pcs",,Threads for printed-to-printed joints,https://www.amazon.com/dp/B0CLKCQ2SH,,120 pcs,yes,"Bought. Measure OD and length with calipers; hole size and depth come from the Step 0 coupon. Count TBD from the CAD."
-Misc,M2.5 / M3 socket-head screws,,Fasteners,,,,yes,"Lengths and counts come from the CAD. The Pi 5 (M2.5) screws straight into printed pilot holes, no inserts; pilot size from the coupon."
+Misc,"Ktehloy heat-set inserts, M3 x 4 x 5 mm (OD 5, length 4), 120 pcs",,Threads for printed-to-printed joints,https://www.amazon.com/dp/B0CLKCQ2SH,,120 pcs,yes,"On hand. Hole ~4.3 mm x 5.5 deep, confirmed by the Step 0 coupon. Count TBD from the CAD."
+Misc,"Heat-set inserts, M2",,"Raspberry Pi 5 and camera mounting",,,,yes,"On hand; size to be measured. Hole picked by the Step 0 coupon."
+Misc,M2 and M3 socket-head screws,,Fasteners,,,,yes,"Lengths and counts come from the CAD."
+Misc,"M2 flat washers, ~5 mm OD",,"Under the M2 screw heads on the Pi 5 (its holes are 2.7 mm, sized for M2.5)",,,,yes,"Keep the OD small: the Pi has parts close to its mounting holes."
 Optional,Raspberry Pi AI HAT+ (Hailo),1,30+ fps on-robot vision,,,,optional,About $70-110. Only if CPU YOLO is too slow.

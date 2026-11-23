@@ -81,12 +81,12 @@ flowchart LR
 |---|---|---|
 | Printer | Bambu Lab P1S. Build volume 256 × 256 × 256 mm sets the largest single part. | ✅ Decided |
 | Material | **PETG**. It handles sun and heat better than PLA and is tougher for pegs and mounts. | ✅ Decided |
-| Fasteners | **Heat-set inserts**: M3 brass inserts (Ktehloy M3 × 4 × 5, on hand) for printed-to-printed joints and anything taken apart more than once. The Pi 5 uses M2.5 screws threaded straight into printed pilot holes, since it's rarely removed. Servos keep their own self-tapping screws. | ✅ Decided |
+| Fasteners | **Heat-set inserts**: M3 brass inserts (Ktehloy M3 × 4 × 5, on hand) for printed-to-printed joints and anything taken apart more than once. The Pi 5 and camera use M2 inserts with M2 screws; on the Pi, a small washer covers its 2.7 mm hole. Servos keep their own self-tapping screws. | ✅ Decided |
 | Servo layout | 11× STS3215: rear 4 (hip yaw, leg pitch, 2 wheels), front 3 (leg pitch, 2 wheels), neck and head 4 (neck pitch, head pitch, head yaw, jaw). See [servo_map.md](servo_map.md). | ✅ Decided |
 | Overall size | Microduck-like, and as small as fits every BOM component. The body block-out sets the real number. | ✅ Decided (approach) |
 | CAD tool | **build123d** (Python). Imports vendor STEP files, gives exact collision checks on the OpenCASCADE kernel, has built-in joints for the URDF/MJCF export, and keeps every change reviewable as text. | ✅ Decided |
 | 3D review | Live [OCP CAD Viewer](https://github.com/bernhard-42/vscode-ocp-cad-viewer) in a browser: orbit, zoom, pan, section clipping, measuring, and a parts tree to hide or show components. Every gate review happens in it. | ✅ Decided |
-| Insert sizes and hole specs | Set by a test coupon on the P1S in PETG | ⏳ Coupon print |
+| Insert sizes and hole specs | Set by the Step 0 coupons on the P1S in PETG (`internal/cad/test_coupon.py`): servo pockets, Pi 5 mount, camera mount, peg fit, M3/M2 insert holes | ⏳ Coupon print |
 | Fit tolerances | Servo pocket and peg clearance, from the same coupon | ⏳ Coupon print |
 | Payload | Heaviest attachment it must lift or push | ⏳ TBD |
 | Wheels | Diameter, tyre (printed TPU or bought), direct on the servo horn | ⏳ Decided in part 2 |
@@ -105,7 +105,7 @@ Each needs a 3D model plus a measured mass. Vendor files are fetched by a script
 | URT-2 adapter (CH343, USB-C, dual TTL + RS485) | Model from calipers | TBD |
 | Pololu D24V50F5 | ✅ Official Pololu STEP | TBD |
 | NP-F970 battery | Model from calipers | TBD |
-| NP-F battery plate | Model from calipers. Listing: ~100 × 90 × 15 mm, 4 corner holes on a 75 mm VESA square. | ~49 g (listing) |
+| NP-F battery plate | Model from calipers. ~100 × 90 × 15 mm; holes on a centred 75 × 75 mm square (confirmed). | ~49 g (listing) |
 | IMU ×2 (body, head) | Depends on the model of the two IMUs on hand | TBD |
 | VL53L7CX breakout | Once chosen | TBD |
 | INMP441, MAX98357A, speaker | Model from calipers | TBD |
@@ -124,4 +124,5 @@ Every approved decision goes here, newest at the bottom, with what was learned.
 | 2026-11-20 | Step 0 | Pi 5 goes in the head | The camera ribbon is the most fragile, hardest cable to route; sturdier cables go through the neck instead |
 | 2026-11-20 | Step 0 | build123d for CAD, OCP CAD Viewer for reviews | Exact geometry for fit and collision checks, joints for sim export, diff-friendly; the viewer allows live rotate, zoom, pan and section views |
 | 2026-11-20 | Step 0 | CAD must produce real-component fit checks, a generated assembly guide with collision checks, and a sim model | Prove the build works before printing; train policies on the same geometry |
-| 2026-11-23 | Step 0 | M3 inserts: Ktehloy M3 × 4 × 5 (bought); Pi 5 on M2.5 screws into PETG pilot holes, no M2.5 inserts | Use what's on hand; the Pi is mounted once, so self-tapped threads are enough |
+| 2026-11-23 | Step 0 | M3 inserts: Ktehloy M3 × 4 × 5 (OD 5, on hand). Pi 5 and camera on M2 inserts + M2 screws, washers on the Pi | Use what's on hand; no M2.5 hardware needed |
+| 2026-11-23 | Step 0 | Coupons test real components (servo, Pi 5, camera, peg), each checked for overlap against its 3D model before printing | A coupon should prove a component fits, not just pick a hole size |
