@@ -24,7 +24,7 @@ Microdog is a hobbyist robot you can build from off-the-shelf parts and a 3D pri
 ```mermaid
 flowchart LR
     subgraph Robot
-        BAT[NP-F970 battery<br/>7.3 V] --> PWR[Fuse · switch · hub]
+        BAT[NP-F970 battery<br/>7.3 V] --> PWR[Fuse · XT30 disconnect · hub]
         PWR --> URT[URT-2 servo adapter]
         PWR --> REG[5 V regulator]
         REG --> PI[Raspberry Pi 5]

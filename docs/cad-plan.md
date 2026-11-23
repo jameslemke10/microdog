@@ -38,7 +38,7 @@ The body comes first because everything else bolts to it. Then work rearward to 
 | # | Part | Holds / does | Servos |
 |---|---|---|---|
 | 0 | Ground rules + component library | Decisions below, plus a model of every bought component, checked against calipers | — |
-| 1 | Body | Battery bay and plate, URT-2, body IMU, regulator, switch, fuse, power hub, wire paths, and the mounting interfaces for rear, front and neck | — |
+| 1 | Body | Battery bay and plate, URT-2, body IMU, regulator, XT30 disconnect, fuse, power hub, wire paths, and the mounting interfaces for rear, front and neck | — |
 | 2 | Rear | Hip (yaw steering), leg (pitch), 2 wheels and tyres | 11–14 |
 | 3 | Front | Leg (pitch), 2 wheels and tyres | 21–23 |
 | 4 | Neck + pegs | Neck pitch joint, neck structure, pegs and the peg spec attachments follow, cable routing to the head | 31 |
@@ -109,7 +109,7 @@ Each needs a 3D model plus a measured mass. Vendor files are fetched by a script
 | IMU: GY-BNO08X (body), HW-123 MPU-6050 (head) | 🟧 Tape | ~25 × 15 and ~20 × 15 mm boards | TBD |
 | VL53L7CX ToF | 🟧 Tape | Board maker unknown; readings inconsistent | TBD |
 | MAX98357A, INMP441, speaker | 🟧 Tape | 17 × 19 amp, 13 mm mics, 31 × 28 speaker with ears 37 mm apart | TBD |
-| KCD1 rocker switch | 🟧 Listing | 20 mm round snap-in; rating open (see open questions) | — |
+| XT30 pair (main disconnect) | 🟧 Typical | ~23 × 10 × 5.5 mm mated, unmeasured | — |
 | 1000 µF capacitor | 🟧 Tape | 10 × 17 mm | — |
 | Inline fuse holder | 🟥 Placeholder | Part not chosen | — |
 | Heat-set inserts, screws | Datasheet | — | — |
@@ -132,3 +132,4 @@ Every approved decision goes here, newest at the bottom, with what was learned.
 | 2026-11-23 | Step 0 | Coupons test real components (servo, Pi 5, camera, peg), each checked for overlap against its 3D model before printing | A coupon should prove a component fits, not just pick a hole size |
 | 2026-11-23 | Step 0 | Every bought part gets a model now, estimates included, each number a named constant with its source | Lets the body be blocked out early; calipers then replace single values instead of whole models |
 | 2026-11-23 | Step 0 | Round 1 of measurements (tape) folded in. NP-F970 stands 74.6 mm off its plate. Proposed IMUs: BNO08X body, MPU-6050 head. | A tape is good for envelopes; slots cover hole positions until calipers |
+| 2026-11-23 | Step 0 | Main on/off is an XT30 plug, not a rocker switch | The KCD1 on hand is marked 6(3)A; an XT30 is rated ~15 A, is already on hand, and isolates both poles |

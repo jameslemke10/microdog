@@ -5,7 +5,7 @@ One removable camera battery runs everything. It feeds the servos at pack voltag
 ```mermaid
 flowchart LR
     BAT["SmallRig NP-F970<br/>7.3 V nom · 8.4 V full<br/>77 Wh · 10 A cont."] --> PLATE[NP-F plate<br/>rewired 16–18 AWG]
-    PLATE -- "+" --> FUSE[15 A fuse] --> SW[Rocker switch<br/>+ lead only] --> HUBP(("+ hub"))
+    PLATE -- "+" --> FUSE[15 A fuse] --> SW[XT30 disconnect<br/>unplug = off] --> HUBP(("+ hub"))
     PLATE -- "−" --> HUBN(("− hub<br/>star ground"))
 
     HUBP -- 16 AWG --> GV1["URT-2 GV1<br/>+1000 µF"]
@@ -57,5 +57,5 @@ flowchart LR
 |---|---|
 | NP-F970 camera battery | Removable, built-in protection, USB-C charging, easy to buy anywhere. No loose lithium cells to spot-weld. |
 | Pololu D24V50F5 | 5 A headroom for Pi 5 + peripherals. It has a dropout of ~0.7–1.5 V, which is why the pack stop is ~7 V. |
-| Rocker switch on + only | Simple and visible. The fuse sits ahead of it to protect the wiring. The KCD1 on hand is marked 6(3)A, so its rating is still open (open question 9). |
+| XT30 plug as the main on/off | Rated ~15 A continuous, above the pack's own 10 A limit, and takes 16 AWG wire. A plain rocker would need a real 15 A+ DC rating; the KCD1 on hand is marked 6(3)A. Unplugging both poles also isolates the robot completely for wiring work. The fuse sits ahead of it to protect the wiring. |
 | 1000 µF 25 V caps | Absorb servo current spikes at the URT-2 and the regulator input. 25 V leaves plenty of margin on an 8.4 V bus. |
