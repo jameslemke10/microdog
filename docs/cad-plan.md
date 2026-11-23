@@ -81,7 +81,7 @@ flowchart LR
 |---|---|---|
 | Printer | Bambu Lab P1S. Build volume 256 × 256 × 256 mm sets the largest single part. | ✅ Decided |
 | Material | **PETG**. It handles sun and heat better than PLA and is tougher for pegs and mounts. | ✅ Decided |
-| Fasteners | **Heat-set inserts**: CNC Kitchen M3 × 5.7 (4.0 mm hole) for structure, M2.5 × 4.0 for the Pi 5, for printed-to-printed joints and anything taken apart more than once. Servos keep their own self-tapping screws. | ✅ Decided |
+| Fasteners | **Heat-set inserts**: M3 brass inserts (Ktehloy M3 × 4 × 5, on hand) for printed-to-printed joints and anything taken apart more than once. The Pi 5 uses M2.5 screws threaded straight into printed pilot holes, since it's rarely removed. Servos keep their own self-tapping screws. | ✅ Decided |
 | Servo layout | 11× STS3215: rear 4 (hip yaw, leg pitch, 2 wheels), front 3 (leg pitch, 2 wheels), neck and head 4 (neck pitch, head pitch, head yaw, jaw). See [servo_map.md](servo_map.md). | ✅ Decided |
 | Overall size | Microduck-like, and as small as fits every BOM component. The body block-out sets the real number. | ✅ Decided (approach) |
 | CAD tool | **build123d** (Python). Imports vendor STEP files, gives exact collision checks on the OpenCASCADE kernel, has built-in joints for the URDF/MJCF export, and keeps every change reviewable as text. | ✅ Decided |
@@ -124,3 +124,4 @@ Every approved decision goes here, newest at the bottom, with what was learned.
 | 2026-11-20 | Step 0 | Pi 5 goes in the head | The camera ribbon is the most fragile, hardest cable to route; sturdier cables go through the neck instead |
 | 2026-11-20 | Step 0 | build123d for CAD, OCP CAD Viewer for reviews | Exact geometry for fit and collision checks, joints for sim export, diff-friendly; the viewer allows live rotate, zoom, pan and section views |
 | 2026-11-20 | Step 0 | CAD must produce real-component fit checks, a generated assembly guide with collision checks, and a sim model | Prove the build works before printing; train policies on the same geometry |
+| 2026-11-23 | Step 0 | M3 inserts: Ktehloy M3 × 4 × 5 (bought); Pi 5 on M2.5 screws into PETG pilot holes, no M2.5 inserts | Use what's on hand; the Pi is mounted once, so self-tapped threads are enough |
