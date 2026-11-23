@@ -89,7 +89,7 @@ flowchart LR
 | Insert sizes and hole specs | Set by the Step 0 coupons on the P1S in PETG (`internal/cad/test_coupon.py`): servo pockets, Pi 5 mount, camera mount, peg fit, M3/M2 insert holes | ⏳ Coupon print |
 | Fit tolerances | Servo pocket and peg clearance, from the same coupon | ⏳ Coupon print |
 | Payload | Heaviest attachment it must lift or push | ⏳ TBD |
-| Wheels | Diameter, tyre (printed TPU or bought), direct on the servo horn | ⏳ Decided in part 2 |
+| Wheels | Bought 1.9" crawler tyres with foam, 120 mm OD x ~50 mm wide; printed rims bolted straight to the wheel servo horn (4x M3 on a 14 mm circle). At least 6 mm clearance to the body everywhere, including the steering sweep. | ✅ Tyres decided; rim in part 2 |
 | Pi location | **Head.** The camera ribbon is the most fragile and hardest cable to route, so it stays short. Power, USB to the URT-2, the servo chain and the body IMU's I2C run through the neck instead. | ✅ Decided |
 
 ### Component library to collect
@@ -136,3 +136,4 @@ Every approved decision goes here, newest at the bottom, with what was learned.
 | 2026-11-23 | Step 0 | No separate fuse for now; the body keeps room for an optional 10 A inline fuse | The SmallRig pack's own ~11 A protection covers shorts and overloads |
 | 2026-11-23 | Step 0 | NP-F plate: the battery drops straight onto the plate and slides ~10 mm along its 100 mm axis into two latches; ridge ~59 mm wide. The body leaves 10 mm of slide room and a clear lift straight up. | Corrected from the first model, which had it rotated 90° |
 | 2026-11-23 | 1 Body / A | Battery mount: stock NP-F plate flat on the body floor, battery standing up, out through the top | The measured plate is known to hold the battery; a printed socket that reuses its contacts is a later upgrade |
+| 2026-11-23 | Step 0 | Tyres: 1.9" crawler, 120 x 50 mm, printed rims on the servo horn; at least 6 mm tyre-to-body gap | A previous rover's tyre rubbed its body; the gap gets checked through the full steering and leg sweep |
