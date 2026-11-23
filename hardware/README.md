@@ -8,7 +8,7 @@ The full list with links is in [`bom.csv`](bom.csv) (it opens as a table on GitH
 |---|---:|---|
 | Actuation | $269.88 | 11× STS3215 servos, URT-2 bus adapter |
 | Compute | $147.10 | Pi 5 4 GB, Active Cooler, microSD |
-| Sensors | $82.07 | Camera Module 3 Wide + Pi 5 cable, BNO086 IMU + Qwiic lead |
+| Sensors | $82.07 | Camera Module 3 Wide + Pi 5 cable, IMU + Qwiic lead |
 | Power | $121.28 | NP-F970 battery, switch, 5 V regulator, wire, lever nuts, caps |
 | Audio | $26.34 | I2S amp, speaker, 2 mics (sold in multi-packs) |
 | Misc | $5.93 | Jumper wires |

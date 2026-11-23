@@ -7,25 +7,25 @@ Compute,Raspberry Pi 5 Active Cooler,1,Keeps the Pi cool while encoding video in
 Compute,"64 GB microSD (A2), e.g. Samsung EVO Select",1,Pi boot and storage,https://www.amazon.com/dp/B0CWPNFH9M,14.99,1,yes,Official Pi 64 GB card: https://www.adafruit.com/product/6011
 Sensors,Raspberry Pi Camera Module 3 Wide,1,"Head camera, 120 deg, autofocus, on CAM/DISP 0",https://www.adafruit.com/product/5658,38.5,1,yes,Amazon listing B0BRY757NX was $65.41. Arducam clones are cheaper but need a driver step.
 Sensors,"Pi 5 camera cable, 22-to-15 pin, 300 mm",1,Camera to Pi through the neck (the stock cable does not fit the Pi 5),https://www.amazon.com/dp/B0CX1SFD44,7.67,1,yes,500 mm option if 300 mm is too short: https://www.adafruit.com/product/5820
-Sensors,9-DoF IMU breakout (I2C),2,Body and head orientation,https://www.amazon.com/dp/B0CG5XXQ5Y,34.95,1,yes,"Two IMUs from earlier projects are being reused; model TBD. If buying new: SparkFun BNO086 (Qwiic, 0x4B; jumper to 0x4A for the second)."
+Sensors,9-DoF IMU breakout (I2C),2,Body (BNO08X) and head (MPU-6050) orientation,https://www.amazon.com/dp/B0CG5XXQ5Y,34.95,1,yes,Price is for buying one new. This build reuses 1x GY-BNO08X (body) and 1x HW-123 MPU-6050 (head) from earlier projects; addresses 0x4A/0x4B and 0x68 do not clash.
 Sensors,Qwiic / STEMMA QT to female jumper cable,2,"IMUs to the Pi header, no soldering",https://www.adafruit.com/product/4397,0.95,1,yes,"Or a Qwiic cable kit (Amazon B0FN4ZDV36, $16.99)."
-Sensors,VL53L7CX 8x8 time-of-flight breakout,1,"Close-range depth 'whisker', reliable to ~1 m",,,,planned,"Exact board TBD. Fallback with a known price: Pololu VL53L5CX carrier, $19.95, https://www.pololu.com/product/3417. Power from 3.3 V."
+Sensors,VL53L7CX 8x8 time-of-flight breakout,1,"Close-range depth 'whisker', reliable to ~1 m",,,,yes,"On hand; board maker unknown (tape: ~15 x 10 mm, holes ~20 mm apart). 3.3 V."
 Power,SmallRig NP-F970 USB-C battery (4469),1,"Main pack: 7.3 V nom, 8.4 V full, 77 Wh, 10 A continuous",https://www.amazon.com/dp/B0D1QZBX9L,57.74,1,yes,"Official: https://www.smallrig.com/NP-F970-USB-C-Rechargeable-Camera-Battery.html ($59.99). Charge with a 36 W+ USB-C PD charger, robot off."
 Power,"NP-F battery plate, 75 mm VESA mount",1,Clip-in battery holder,,,,yes,"~100 x 90 x 15 mm, ~49 g, 4 mounting screws included. Replace the stock DC barrel lead with 16-18 AWG. Listing link TBD; Adafruit 2089 ($14.95) is a pre-wired alternative."
 Power,"Inline fuse, 15 A",1,Over-current protection on the pack positive,,,,yes,Part TBD; see docs/open-questions.md.
-Power,"DaierTek 20 A rocker switch, 2-pin",1,Main on/off on the positive lead (37 x 21 mm cut-out),https://www.amazon.com/dp/B09JB4V82P,7.99,1,yes,
+Power,"DaierTek KCD1 round rocker switch, 2-pin (on hand)",1,Main on/off on the positive lead (20 mm round hole),https://www.amazon.com/dp/B09JB4V82P,7.99,1,yes,Body is marked 6(3)A although the listing says 20 A at 12 V DC. Likely under-rated for the main lead; see docs/open-questions.md #9.
 Power,Pololu D24V50F5 5 V 5 A step-down regulator,1,Pack to 5 V for the Pi and the audio amp,https://www.pololu.com/product/2851,32.95,1,yes,"Needs ~5.7-6.5 V in, hence the ~7 V software pack stop. Allows PSU_MAX_CURRENT=5000."
 Power,"USB-C plug to bare wires, 20 AWG (2-pack)",1,Regulator output into the Pi's USB-C port,https://www.amazon.com/dp/B0FVXBMLSP,6.99,1,yes,"Red +, black -, 5 A rated."
 Power,"16 AWG silicone wire, red + black, 10 ft each",1,Battery-current wiring,https://www.amazon.com/dp/B0D968WL63,6.66,1,yes,
 Power,WAGO 221-413 lever nuts (10-pack),1,"Power hub: one for +, one for - (no soldering)",https://www.amazon.com/dp/B0GLHLRZR4,7.99,1,yes,
-Power,1000 uF 25 V electrolytic capacitor,2,Bulk caps at URT-2 GV1 and regulator VIN,https://www.sparkfun.com/electrolytic-decoupling-capacitors-1000uf-25v.html,0.96,2 x $0.48,yes,"Or a Nichicon 6-pack on Amazon (B00J0CAWRA, $6.48)."
+Power,1000 uF 25 V electrolytic capacitor,2,Bulk caps at URT-2 GV1 and regulator VIN,https://www.sparkfun.com/electrolytic-decoupling-capacitors-1000uf-25v.html,0.96,2 x $0.48,yes,"Or a Nichicon 6-pack on Amazon (B00J0CAWRA, $6.48). On hand: 10 x 17 mm."
 Audio,MAX98357A I2S amplifier,1,"Speaker driver, powered from the 5 V regulator",https://www.amazon.com/dp/B0B4J93M9N,9.59,3-pack,yes,Only one is needed.
 Audio,4 ohm 3 W speaker,1,Voice,https://www.amazon.com/dp/B0BTP67F81,9.59,4-pack,yes,Cut off the JST plug; screw the wires into the amp.
 Audio,INMP441 I2S microphone,2,Stereo ears,https://www.amazon.com/dp/B0F944JC5N,7.16,3-pack,yes,Needs header pins soldered.
 Misc,"Dupont jumper wires (M-F, M-M, F-F)",1,GPIO hookups,https://www.amazon.com/dp/B01EV70C78,5.93,120-pc kit,yes,Skip if you have some.
 Misc,PETG filament,,All printed parts (chosen for heat and sun resistance),,,,yes,Amount TBD from the CAD slicer estimates.
 Misc,"Ktehloy heat-set inserts, M3 x 4 x 5 mm (OD 5, length 4), 120 pcs",,Threads for printed-to-printed joints,https://www.amazon.com/dp/B0CLKCQ2SH,,120 pcs,yes,"On hand. Hole ~4.3 mm x 5.5 deep, confirmed by the Step 0 coupon. Count TBD from the CAD."
-Misc,"Heat-set inserts, M2",,"Raspberry Pi 5 and camera mounting",,,,yes,"On hand; size to be measured. Hole picked by the Step 0 coupon."
-Misc,M2 and M3 socket-head screws,,Fasteners,,,,yes,"Lengths and counts come from the CAD."
-Misc,"M2 flat washers, ~5 mm OD",,"Under the M2 screw heads on the Pi 5 (its holes are 2.7 mm, sized for M2.5)",,,,yes,"Keep the OD small: the Pi has parts close to its mounting holes."
+Misc,"Heat-set inserts, M2",,Raspberry Pi 5 and camera mounting,,,,yes,On hand; size to be measured. Hole picked by the Step 0 coupon.
+Misc,M2 and M3 socket-head screws,,Fasteners,,,,yes,Lengths and counts come from the CAD.
+Misc,"M2 flat washers, ~5 mm OD",,"Under the M2 screw heads on the Pi 5 (its holes are 2.7 mm, sized for M2.5)",,,,yes,Keep the OD small: the Pi has parts close to its mounting holes.
 Optional,Raspberry Pi AI HAT+ (Hailo),1,30+ fps on-robot vision,,,,optional,About $70-110. Only if CPU YOLO is too slow.

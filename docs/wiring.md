@@ -17,7 +17,8 @@ flowchart LR
 
     USBA -- USB data --> URT[URT-2] -- 3-pin TTL --> SERVOS[STS3215 chains]
     CAM0 -- "22→15 pin ribbon, 300 mm" --> CAM[Camera Module 3 Wide]
-    P3 & P5 --- IMU["BNO086 IMU<br/>0x4B"]
+    P3 & P5 --- IMU["Body IMU: GY-BNO08X<br/>0x4A or 0x4B"]
+    P3 & P5 --- IMU2["Head IMU: MPU-6050 (HW-123)<br/>0x68"]
     P3 & P5 --- TOF["VL53L7CX ToF<br/>addr TBD"]
     G18 & G19 --- MICS["2× INMP441"]
     G18 & G19 --- AMP[MAX98357A]
@@ -42,9 +43,9 @@ flowchart LR
 
 | Device | Address | Power | Notes |
 |---|---|---|---|
-| IMU, body | TBD (model on hand TBD) | 3.3 V | Mount flat near the body centre. Its I2C runs up the neck to the Pi. |
-| IMU, head | TBD; must differ from the body IMU | 3.3 V | Near the Pi |
-| VL53L7CX ToF | TBD (the VL53L5CX was 0x29) | **3.3 V**, so the I2C lines stay at 3.3 V | An 8×8 close-range "whisker" sensor, reliable to ~1 m. Exact breakout board TBD. |
+| IMU, body | GY-BNO08X (BNO080/085, 9-DoF with on-chip fusion): 0x4A or 0x4B, check the board | 3.3 V | Proposed. Mount flat near the body centre. Its I2C runs up the neck to the Pi. |
+| IMU, head | HW-123 (MPU-6050, 6-DoF): 0x68 (0x69 with AD0 high) | 3.3 V on VCC (the board has its own regulator) | Proposed. Near the Pi. No address clash with the BNO08X. |
+| VL53L7CX ToF | TBD (the VL53L5CX was 0x29) | **3.3 V**, so the I2C lines stay at 3.3 V | An 8×8 close-range "whisker" sensor, reliable to ~1 m. On hand; board maker to identify. |
 
 Enable I2C at 400 kHz in `/boot/firmware/config.txt`:
 

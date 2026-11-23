@@ -57,5 +57,5 @@ flowchart LR
 |---|---|
 | NP-F970 camera battery | Removable, built-in protection, USB-C charging, easy to buy anywhere. No loose lithium cells to spot-weld. |
 | Pololu D24V50F5 | 5 A headroom for Pi 5 + peripherals. It has a dropout of ~0.7–1.5 V, which is why the pack stop is ~7 V. |
-| Rocker switch on + only | Simple and visible. The fuse sits ahead of it to protect the wiring. |
+| Rocker switch on + only | Simple and visible. The fuse sits ahead of it to protect the wiring. The KCD1 on hand is marked 6(3)A, so its rating is still open (open question 9). |
 | 1000 µF 25 V caps | Absorb servo current spikes at the URT-2 and the regulator input. 25 V leaves plenty of margin on an 8.4 V bus. |

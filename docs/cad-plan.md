@@ -98,26 +98,23 @@ Each needs a 3D model plus a measured mass. Vendor files are fetched by a script
 
 | Component | Model | Source | Mass |
 |---|---|---|---|
-| Feetech STS3215 | ✅ Vendor STEP | Feetech (45.4 × 24.8 mm body). Spot-check with calipers. | TBD |
-| Raspberry Pi 5 | ✅ Vendor STEP | Raspberry Pi Ltd (MIT) | TBD |
+| Feetech STS3215 | ✅ Vendor STEP | Feetech (45.4 × 24.8 mm body) | TBD |
+| Raspberry Pi 5 + Active Cooler | ✅ Vendor STEP + cooler from drawing | Raspberry Pi Ltd (MIT). Cooler placed from photos; it sits below the USB/Ethernet height. | TBD |
 | Pololu D24V50F5 | ✅ Vendor STEP | Pololu | TBD |
-| Camera Module 3 Wide | ✅ From drawing | Official product brief (no STEP published) | TBD |
-| Active Cooler | ✅ From drawing | Official drawing (63.5 × 42.5 × 13.7 mm). Position on the Pi to measure. | TBD |
-| WAGO 221-413 | ✅ From drawing | WAGO datasheet (18.8 × 8.4 × 18.8 mm) | — |
-| NP-F battery plate | 🟥 Estimate | Listing ~100 × 90 × 15 mm; 75 × 75 mm centred hole square measured | ~49 g (listing) |
-| NP-F970 battery (SmallRig 4469) | 🟥 Estimate | SmallRig spec 74.6 × 71.6 × 38.5 mm | 362 g (SmallRig) |
-| URT-2 adapter | 🟥 Estimate | Retailer spec 55.8 × 36.6 × 11.5 mm, holes 48.8 × 28.8 mm | 12.5 g (retailer) |
-| Rocker switch | 🟥 Estimate | 37 × 21 mm cut-out (listing); bezel and depth guessed | TBD |
-| 1000 µF capacitor | 🟥 Estimate | Typical 10 × 20 mm can | — |
-| MAX98357A amp (clone) | 🟥 Estimate | Adafruit's version is 19.4 × 17.8 mm; clone unknown | TBD |
-| INMP441 mic (clone) | 🟥 Estimate | Typical ~14 mm module | TBD |
-| Speaker 4 Ω 3 W | 🟥 Estimate | Guessed 40 × 28 mm "2840" type; ~35 mm hole spacing measured | TBD |
-| IMU ×2 | 🟪 Placeholder | Models unknown: read the text on the boards | TBD |
-| Inline fuse holder | 🟪 Placeholder | Part not chosen | — |
-| VL53L7CX breakout | Not modelled | Board not chosen | — |
+| Camera Module 3 Wide | ✅ From drawing | Official product brief | TBD |
+| WAGO 221-413 | ✅ From drawing | WAGO datasheet | — |
+| NP-F970 battery (SmallRig 4469) | ✅ Spec, tape agrees | 71.6 × 38.5 mm contact face, stands 74.6 mm tall | 362 g (SmallRig) |
+| URT-2 adapter | ✅ Spec + photo | 55.8 × 36.6 mm, holes 48.8 × 28.8 mm; connector layout from a photo | 12.5 g (retailer) |
+| NP-F battery plate | 🟧 Tape | 100 × 90 mm, stepped ~5/10/15 mm; VESA 75 holes (slotted bosses) | ~49 g (listing) |
+| IMU: GY-BNO08X (body), HW-123 MPU-6050 (head) | 🟧 Tape | ~25 × 15 and ~20 × 15 mm boards | TBD |
+| VL53L7CX ToF | 🟧 Tape | Board maker unknown; readings inconsistent | TBD |
+| MAX98357A, INMP441, speaker | 🟧 Tape | 17 × 19 amp, 13 mm mics, 31 × 28 speaker with ears 37 mm apart | TBD |
+| KCD1 rocker switch | 🟧 Listing | 20 mm round snap-in; rating open (see open questions) | — |
+| 1000 µF capacitor | 🟧 Tape | 10 × 17 mm | — |
+| Inline fuse holder | 🟥 Placeholder | Part not chosen | — |
 | Heat-set inserts, screws | Datasheet | — | — |
 
-🟥 estimates and 🟪 placeholders can be looked at but not designed around. Caliper measurements replace them one value at a time.
+✅ can be designed around. 🟧 tape readings (±1 mm) can set envelopes, and their mounting holes get slots until checked with calipers. 🟥 placeholders can't be designed around.
 
 ## Decision log
 
@@ -134,3 +131,4 @@ Every approved decision goes here, newest at the bottom, with what was learned.
 | 2026-11-23 | Step 0 | M3 inserts: Ktehloy M3 × 4 × 5 (OD 5, on hand). Pi 5 and camera on M2 inserts + M2 screws, washers on the Pi | Use what's on hand; no M2.5 hardware needed |
 | 2026-11-23 | Step 0 | Coupons test real components (servo, Pi 5, camera, peg), each checked for overlap against its 3D model before printing | A coupon should prove a component fits, not just pick a hole size |
 | 2026-11-23 | Step 0 | Every bought part gets a model now, estimates included, each number a named constant with its source | Lets the body be blocked out early; calipers then replace single values instead of whole models |
+| 2026-11-23 | Step 0 | Round 1 of measurements (tape) folded in. NP-F970 stands 74.6 mm off its plate. Proposed IMUs: BNO08X body, MPU-6050 head. | A tape is good for envelopes; slots cover hole positions until calipers |
