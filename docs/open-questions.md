@@ -15,7 +15,7 @@ Things that are undecided or unmeasured. Mechanical questions get settled one pa
 ## Electrical
 
 8. **NP-F battery plate.** Plate chosen (~100 × 90 × 15 mm, 75 mm VESA holes, ~49 g). Its stock DC barrel lead gets replaced with 16–18 AWG; confirm the contacts handle the current and caliper it for the CAD.
-9. **Fuse rating.** Main on/off is now an XT30 plug (rated ~15 A continuous). The 15 A fuse is above that, but the pack trips at 11 A anyway. A 10 A fuse would protect the XT30 and the wiring more tightly. Check it doesn't blow during hard servo moves in the bench test.
+9. **Inline fuse?** Not fitted for now: the pack's built-in protection (~11 A) is the only over-current cut-out. If a separate fuse is added, 10 A (mini blade, on the + lead next to the plate) sits below the XT30's 15 A rating.
 10. **URT-2 USB isolation.** The listing says dual TTL + RS485 ports over USB-C, so two servo chains plug straight in. Still meter whether USB VBUS is isolated from the servo supply.
 11. **ToF board.** A VL53L7CX breakout is on hand; identify the board maker for its drawing, address and driver (ST's ULD driver, loaded at start-up).
 12. **I2S overlay** for simultaneous mic capture and amp playback.
