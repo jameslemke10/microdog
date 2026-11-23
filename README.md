@@ -55,8 +55,8 @@ More detail: [concept](docs/concept.md) · [the brain](docs/architecture.md) · 
 | Step | State |
 |---|---|
 | Concept, power design, parts list | ✅ Done |
-| CAD: body → rear → front → neck → head | 🚧 Starting ([plan](docs/cad-plan.md)) |
-| Electronics bring-up: Pi, servo bus, camera, IMU, audio | 🔜 Parts arriving ([checklist](docs/bring-up.md)) |
+| CAD: body → rear → front → neck → head | 🚧 Component library done; body brief (gate A) written ([plan](docs/cad-plan.md)) |
+| Electronics bring-up: Pi, servo bus, camera, IMU, audio | 🔜 Parts in hand ([checklist](docs/bring-up.md)) |
 | Driving and teleop | 🔜 |
 | First attachment (broom) | 🔜 |
 | Autonomy: spot a mess, fetch the right tool | 🔜 |

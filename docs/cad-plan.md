@@ -33,6 +33,8 @@ flowchart LR
     S0[0. Ground rules<br/>+ component models] --> B[1. Body] --> R[2. Rear] --> F[3. Front] --> N[4. Neck + pegs] --> H[5. Head] --> A[6. First attachment]
 ```
 
+**Current status (2026-11-23):** Step 0 is mostly done (component library modelled, test coupon designed, not yet printed). Part 1, the body, is at gate A: the brief is written and its main decisions are in the log below.
+
 The body comes first because everything else bolts to it. Then work rearward to finish the base, then forward and up to the head.
 
 | # | Part | Holds / does | Servos |
